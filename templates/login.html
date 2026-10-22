@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ingresar · Colchones Rubí</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}"></head>
+<body><section id="login">
+ <form class="box" method="post">
+  <h1>Colchones Rubí</h1><p>Sistema de inventario · Planta de producción</p>
+  <label for="doc">Documento</label><input id="doc" name="documento" inputmode="numeric" autocomplete="username" required autofocus>
+  <label for="pw">Contraseña</label><input id="pw" name="password" type="password" autocomplete="current-password" required>
+  <button class="btn full">Ingresar</button><div class="err">{{ err }}</div>
+ </form></section></body></html>

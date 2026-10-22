@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inventario · Colchones Rubí</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}"></head>
+<body>
+<header><div class="brand">Colchones Rubí</div><span>{{ nombre }} · {{ rol }}</span>
+ <a class="btn" href="/exportar" style="text-decoration:none">⬇ Descargar Excel</a>
+ <a class="btn ghost" href="/logout" style="text-decoration:none">Salir</a></header>
+<main><div class="kpis" id="kpis"></div><div id="alerts"></div>
+ <div class="bar"><input id="q" placeholder="Buscar por código o nombre…"></div><div class="grid" id="grid"></div></main>
+<dialog id="dlg"><h2>⚠ Producto agotado</h2><p id="dmsg"></p>
+ <div style="display:flex;gap:10px;justify-content:flex-end"><button class="btn ghost" id="dno">Después</button><button class="btn" id="dyes">Solicitar mercancía</button></div></dialog>
+<script src="{{ url_for('static', filename='app.js') }}"></script></body></html>
